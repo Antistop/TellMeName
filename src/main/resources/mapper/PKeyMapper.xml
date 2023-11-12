@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hanhan.mapper.KeyMapper">
+    <delete id="deletePKeyByCreatTime">
+        delete from p_key
+          where DATE(DATE_SUB(NOW(),interval 30 day)) >= DATE(create_time) limit 100
+    </delete>
+</mapper>

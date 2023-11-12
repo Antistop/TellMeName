@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tellmename
+    username: root
+    password: 333
+#配置mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #配置xml文件的路径，类路径下的所有的以Mapper结尾的.xml文件
+  mapper-locations: classpath:mapper/*Mapper.mapper
+
+server:
+  port: 7070
